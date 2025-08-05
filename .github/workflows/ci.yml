@@ -3,6 +3,7 @@ name: CI
 on:
   push:
     branches: [main]
+    tags: ['v*']  # IMPORTANT: Also trigger on tags for release process
   pull_request:
     branches: [main]
 
