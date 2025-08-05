@@ -1,6 +1,6 @@
 {
   "name": "@orcdkestrator/orcdk-plugin-localstack",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "LocalStack lifecycle management plugin for Orcdkestrator",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
