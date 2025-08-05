@@ -1,7 +1,7 @@
 const mockExec = jest.fn();
 
 jest.mock('util', () => ({
-  promisify: () => mockExec,
+  promisify: (): typeof mockExec => mockExec,
 }));
 
 import { LocalStackCLI } from '../cli';

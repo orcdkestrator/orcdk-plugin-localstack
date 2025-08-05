@@ -8,7 +8,6 @@ jest.mock('fs', () => ({
 import { HotReloadWatcher } from '../hot-reload';
 import { LocalStackConfig } from '../types';
 import * as fs from 'fs';
-import { EventBus } from '@orcdkestrator/core';
 
 // Mock EventBus
 jest.mock('@orcdkestrator/core', () => {
@@ -23,16 +22,11 @@ jest.mock('@orcdkestrator/core', () => {
 });
 
 describe('HotReloadWatcher - Environment Variables', () => {
-  let mockEventBus: any;
   const originalEnv = process.env;
   
   beforeEach(() => {
     jest.clearAllMocks();
     process.env = { ...originalEnv };
-    
-    // Get mocked EventBus
-    const mockedCore = jest.requireMock('@orcdkestrator/core');
-    mockEventBus = mockedCore.EventBus.getInstance();
   });
   
   afterEach(() => {
