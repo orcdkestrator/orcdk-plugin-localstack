@@ -178,6 +178,7 @@ export class HotReloadWatcher {
       'LocalStackHotReload'
     );
 
+    // eslint-disable-next-line no-console
     console.log(`[localstack:hot-reload] Code updated for ${functionName}: ${path.basename(changedFile)}`);
   }
 
@@ -187,6 +188,7 @@ export class HotReloadWatcher {
    */
   private debug(message: string): void {
     if (this.config.debug) {
+      // eslint-disable-next-line no-console
       console.log(`[localstack:hot-reload:debug] ${message}`);
     }
   }

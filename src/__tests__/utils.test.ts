@@ -52,8 +52,8 @@ describe('LocalStack Utils', () => {
     });
 
     it('should handle null/undefined input', () => {
-      expect(expandEnvironmentVariables(null as any)).toBe(null);
-      expect(expandEnvironmentVariables(undefined as any)).toBe(undefined);
+      expect(expandEnvironmentVariables(null)).toBe(null);
+      expect(expandEnvironmentVariables(undefined)).toBe(undefined);
     });
 
     it('should not expand $VAR_NAME when followed by {', () => {

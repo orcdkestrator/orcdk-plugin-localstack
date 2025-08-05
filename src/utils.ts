@@ -9,7 +9,10 @@
  * @param value The string potentially containing environment variables
  * @returns The string with environment variables expanded
  */
-export function expandEnvironmentVariables(value: string): string {
+export function expandEnvironmentVariables(value: string): string;
+export function expandEnvironmentVariables(value: null): null;
+export function expandEnvironmentVariables(value: undefined): undefined;
+export function expandEnvironmentVariables(value: string | null | undefined): string | null | undefined {
   if (!value || typeof value !== 'string') {
     return value;
   }
