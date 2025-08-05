@@ -26,10 +26,16 @@ describe('LocalStackPlugin', () => {
   });
 
   it('should have correct name', () => {
-    expect(plugin.name).toBe('localstack');
+    expect(plugin.name).toBe('@orcdkestrator/orcdk-plugin-localstack');
   });
 
   it('should be defined', () => {
     expect(plugin).toBeDefined();
+  });
+
+  it('should initialize successfully', async () => {
+    await expect(plugin.initialize(mockConfig, mockOrcdkConfig)).resolves.not.toThrow();
+    expect(plugin.name).toBe('@orcdkestrator/orcdk-plugin-localstack');
+    expect(plugin.version).toBeDefined();
   });
 });

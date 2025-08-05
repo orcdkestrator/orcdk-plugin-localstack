@@ -1,16 +1,11 @@
 /* eslint-disable no-console */
 import type { Plugin, PluginConfig, OrcdkConfig, CommandInfo } from '@orcdkestrator/core';
 import { EventBus, EventTypes } from '@orcdkestrator/core';
-import * as fs from 'fs';
 import * as path from 'path';
 import { LocalStackCLI } from './cli';
 import { LocalStackConfig } from './types';
 import { HotReloadWatcher } from './hot-reload';
 import { expandEnvironmentVariables } from './utils';
-
-// Read version from package.json
-const packageJsonPath = path.join(__dirname, '../..', 'package.json');
-const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
 
 /**
  * LocalStack plugin for local AWS development
@@ -59,8 +54,8 @@ const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
  * - hotReloading: Configuration for Lambda hot reloading
  */
 export class LocalStackPlugin implements Plugin {
-  public readonly name = '@orcdkestrator/localstack';
-  public readonly version = packageJson.version;
+  public readonly name = '@orcdkestrator/orcdk-plugin-localstack';
+  public readonly version = '1.0.0';
   
   private cli: LocalStackCLI | null = null;
   private config: PluginConfig | null = null;

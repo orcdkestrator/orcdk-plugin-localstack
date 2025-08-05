@@ -25,6 +25,9 @@ jobs:
     - name: Install dependencies
       run: npm ci
     
+    - name: Install peer dependencies
+      run: npm install @orcdkestrator/core@latest --no-save
+    
     - name: Run tests
       run: npm test
     

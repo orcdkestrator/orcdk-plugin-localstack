@@ -41,7 +41,7 @@
     "js-yaml": "^4.1.0"
   },
   "peerDependencies": {
-    "@orcdkestrator/core": "^1.0.0"
+    "@orcdkestrator/core": "^1.0.2"
   },
   "devDependencies": {
     "@types/jest": "^29.0.0",
