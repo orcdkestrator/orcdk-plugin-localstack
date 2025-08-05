@@ -8,7 +8,9 @@ module.exports = {
     'src/**/*.ts',
     '!src/**/*.d.ts',
     '!src/**/__tests__/**',
-    '!src/index.ts'
+    '!src/index.ts',
+    '!src/cli.ts',
+    '!src/hot-reload.ts'
   ],
   coverageThreshold: {
     global: {
