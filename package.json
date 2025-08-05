@@ -15,13 +15,17 @@
     "clean": "rimraf dist",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "lint": "eslint src/**/*.ts",
+    "lint": "eslint src --ext .ts",
     "prepublishOnly": "npm run clean && npm run build"
   },
   "keywords": [
     "orcdkestrator",
     "plugin",
-    "localstack", "aws", "local", "development", "orchestration"
+    "localstack",
+    "aws",
+    "local",
+    "development",
+    "orchestration"
   ],
   "repository": {
     "type": "git",
