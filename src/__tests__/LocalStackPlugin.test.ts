@@ -1,8 +1,8 @@
-import { LocalstackPlugin } from '../index';
+import { LocalStackPlugin } from '../index';
 import { PluginConfig, OrcdkConfig } from '@orcdkestrator/core';
 
-describe('LocalstackPlugin', () => {
-  let plugin: LocalstackPlugin;
+describe('LocalStackPlugin', () => {
+  let plugin: LocalStackPlugin;
   let mockConfig: PluginConfig;
   let mockOrcdkConfig: OrcdkConfig;
 
@@ -10,17 +10,19 @@ describe('LocalstackPlugin', () => {
     mockConfig = {
       name: 'localstack',
       enabled: true,
-      options: {}
+      config: {}
     };
 
     mockOrcdkConfig = {
-      version: '1.0.0',
-      environments: {},
-      isLocal: true,
+      cdkRoot: 'cdk',
+      deploymentStrategy: 'auto',
+      environments: {
+        local: { displayName: 'Local', isLocal: true }
+      },
       plugins: []
     };
 
-    plugin = new LocalstackPlugin();
+    plugin = new LocalStackPlugin();
   });
 
   it('should have correct name', () => {
